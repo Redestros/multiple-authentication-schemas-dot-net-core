@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Options
+namespace Core.Settings
 {
     public class TenantSettings
     {
@@ -11,13 +11,13 @@ namespace Core.Options
     public class Tenant
     {
         public string Name { get; set; }
-        public string TID { get; set; }
+        public string Tid { get; set; }
         public string ConnectionString { get; set; }
     }
 
     public class Configuration
     {
-        public string DBProvider { get; set; }
+        public string DbProvider { get; set; }
         public string ConnectionString { get; set; }
     }
 }

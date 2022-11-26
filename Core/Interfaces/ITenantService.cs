@@ -1,13 +1,12 @@
-﻿using Core.Options;
+﻿using Core.Settings;
 
-namespace Core.Interfaces
+namespace Core.Interfaces;
+
+public interface ITenantService
 {
-    public interface ITenantService
-    {
-        public string GetDatabaseProvider();
+    public string GetDatabaseProvider();
 
-        public string GetConnectionString();
+    public string GetConnectionString();
 
-        public Tenant GetTenant();
-    }
+    public Tenant GetTenant();
 }
