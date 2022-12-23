@@ -9,7 +9,7 @@ public class TenantHeaderConfig : IOperationFilter
     public void Apply(OpenApiOperation operation, OperationFilterContext context)
     {
         operation.Parameters ??= new List<OpenApiParameter>();
-        operation.Parameters.Add(new OpenApiParameter()
+        operation.Parameters.Add(new OpenApiParameter
         {
             Name = "tenant",
             In = ParameterLocation.Header,

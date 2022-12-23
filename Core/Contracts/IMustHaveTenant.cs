@@ -1,7 +1,6 @@
-﻿namespace Core.Contracts
+﻿namespace Core.Contracts;
+
+public interface IMustHaveTenant
 {
-    public interface IMustHaveTenant
-    {
-        public string TenantId { get; set; }
-    }
+    public string TenantId { get; set; }
 }
