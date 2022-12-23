@@ -1,19 +1,14 @@
-# Multitenancy in ASP.NET Core
+# Multitenancy and Multiple authentication schemas in ASP.NET Core
 
-Multitenancy! In this article, let’s learn how to implement Multitenancy in ASP.NET Core in a rather simple way making use of Entity Framework Core. Multitenancy in ASP. NET Core is yet another topic that is not very well documented on the internet. It’s kind of tricky to build a Multitenant application right from scratch. But here is a simple way to do so.
+This project is based on multi-tenancy repository by Mukesh Murugan. To understand more multi-tenancy concept you can find detailed infos in 
 
-Topics Covered:
+the following article - https://codewithmukesh.com/blog/multitenancy-in-aspnet-core/
 
-- What is MultiTenancy?
-- Database Access Strategies
-- Identifying Tenants
-- Getting Started with Multitenancy in ASP.NET Core
-  - Tenant Settings – Explained
-  - Tenant Service
-  - Extended ApplicationDBContext
-  - Automated Migrations
-  - Service Registrations
-- Testing
-- Further Enhancements
+When having a single backend serving users of different apps that may have different identity providers or different authentication settings, we can use
+different authentication schemas to fulfill our requirements.
 
-Read the entire article - https://codewithmukesh.com/blog/multitenancy-in-aspnet-core/
+This project represents a Resource Server that validates OpenId tokens form different Identity providers.
+
+We used keycloak as IDP for testing. You can find different realms settings in **Keycloak-realms** folder.
+
+You can Authentication configuring logic in the extension method in Infrastructure project.
